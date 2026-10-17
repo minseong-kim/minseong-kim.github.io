@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minseong Kim</title>
+<meta name="description" content="Minseong Kim — software engineer working toward reliable AI for manufacturing and clinical research.">
+<style>
+  :root{
+    --ink:#14181f; --muted:#5a6270; --line:#e2e5ea; --soft:#f5f6f8;
+    --accent:#1f3a5f; --accent-soft:#e8eef6; --bg:#ffffff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:"Source Sans 3",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       font-size:17px;line-height:1.6}
+  a{color:var(--accent)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+  /* header band */
+  header.hero{background:linear-gradient(135deg,#1f3a5f 0%,#2c4f73 60%,#3b6383 100%);color:#fff}
+  .hero .wrap{display:flex;gap:36px;align-items:center;padding:56px 20px 48px}
+  .hero img{width:170px;height:170px;border-radius:50%;object-fit:cover;
+            border:4px solid rgba(255,255,255,.85);flex:none;background:#fff}
+  .hero h1{margin:0 0 6px;font-size:2.4rem;line-height:1.15;letter-spacing:-.01em}
+  .hero .title{margin:0 0 14px;font-size:1.1rem;opacity:.92}
+  .hero .meta{margin:0;font-size:.95rem;opacity:.85}
+  .hero .meta a{color:#fff}
+  .btns{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+  .btn{display:inline-block;padding:9px 16px;border-radius:6px;font-weight:600;font-size:.95rem;
+       text-decoration:none;background:#fff;color:var(--accent);border:1px solid #fff}
+  .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+
+  /* tabs nav */
+  nav.tabs{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+  nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto}
+  nav.tabs a{flex:none;padding:14px 14px;text-decoration:none;color:var(--muted);font-weight:600;
+             font-size:.92rem;letter-spacing:.04em;text-transform:uppercase;border-bottom:3px solid transparent}
+  nav.tabs a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+
+  main section{padding:40px 0 8px;scroll-margin-top:56px}
+  h2{font-size:1.6rem;margin:0 0 6px;color:var(--ink)}
+  h2::after{content:"";display:block;width:36px;height:3px;background:var(--accent);margin-top:8px}
+  .lead{max-width:760px}
+  .pill{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;
+        font-size:.85rem;padding:3px 10px;border-radius:999px;margin:0 6px 8px 0}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
+  .card{border:1px solid var(--line);border-radius:10px;padding:18px 20px;background:#fff}
+  .card h3{margin:0 0 6px;font-size:1.08rem}
+  .card h3 a{color:var(--ink);text-decoration:none}
+  .card h3 a:hover{text-decoration:underline}
+  .card p{margin:0 0 10px;color:#333;font-size:.97rem}
+  .card .go{font-weight:600;font-size:.92rem}
+  .card.proj{padding:0;overflow:hidden}
+  .card.proj .shot{display:block;aspect-ratio:16/10;border-bottom:1px solid var(--line);background:var(--soft)}
+  .card.proj .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+  .card.proj .body{padding:16px 20px 18px}
+  .note{color:var(--muted);font-size:.92rem;margin-top:6px}
+
+  .item{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .item:last-child{border-bottom:none}
+  .item .org{font-weight:700}
+  .item .when{color:var(--muted);font-size:.92rem;text-align:right;white-space:nowrap}
+  .item .role{color:var(--muted);font-style:italic;grid-column:1/-1}
+  .item .desc{grid-column:1/-1;margin:4px 0 0;font-size:.97rem}
+
+  table.certs{width:100%;border-collapse:collapse;margin-top:14px;font-size:.97rem}
+  table.certs th,table.certs td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.certs th{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  table.certs td:last-child{white-space:nowrap}
+
+  footer{margin-top:48px;padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+  @media (max-width:720px){
+    .hero .wrap{flex-direction:column;text-align:center;gap:18px;padding:40px 16px 36px}
+    .hero h1{font-size:2rem}
+    .btns{justify-content:center}
+    .grid{grid-template-columns:1fr}
+    .item{grid-template-columns:1fr}
+    .item .when{text-align:left}
+    .wrap{padding:0 16px}
+    table.certs th:nth-child(2),table.certs td:nth-child(2){display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img src="photo.jpg" alt="Photo of Minseong Kim">
+    <div>
+      <h1>Minseong Kim</h1>
+      <p class="title">Senior Software Engineer · Reliable AI for Manufacturing and Clinical Research</p>
+      <p class="meta">Cerritos, California · <a href="mailto:medium2000@naver.com">medium2000@naver.com</a></p>
+      <div class="btns">
+        <a class="btn" href="MinseongKim_CV.pdf">View CV (PDF)</a>
+        <a class="btn ghost" href="#projects">Projects</a>
+        <a class="btn ghost" href="#certifications">Certifications</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap">
+    <a href="#bio">Bio</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="bio">
+    <h2>Bio</h2>
+    <p class="lead">I am a software engineer with more than fifteen years of experience building and supporting systems that real operations depend on: aeronautical data for flight planning at NTT DATA in Japan, product lifecycle and semiconductor design-IP systems at Samsung Electronics, and logistics and financial platforms in the United States. My current interest is making AI dependable in high-stakes settings — decision making under uncertainty in manufacturing operations, and trustworthy use of large language models in regulated fields such as clinical research.</p>
+    <div>
+      <span class="pill">Decision making under uncertainty</span>
+      <span class="pill">Reliable LLMs in regulated domains</span>
+      <span class="pill">Manufacturing AI</span>
+      <span class="pill">Enterprise data systems</span>
+    </div>
+    <p class="note">Languages: Korean (native) · English (professional) · Japanese (business professional, JLPT N1)</p>
+  </section>
+
+  <section id="projects">
+    <h2>Independent AI Projects</h2>
+    <p class="note">Self-directed, non-commercial prototypes (2025 – present). Not formal academic studies or production deployments. Manufacturing prototypes use simulated data.</p>
+    <div class="grid">
+      <div class="card proj">
+        <a class="shot" href="https://minseong-kim.github.io/clinicalmind/"><img src="images/clinicalmind.jpg" alt="ClinicalMind main screen" loading="lazy"></a>
+        <div class="body">
+        <h3><a href="https://minseong-kim.github.io/clinicalmind/">ClinicalMind – AI-Assisted Clinical Study Design</a></h3>
+        <p>LLM workflows for drafting study arms, endpoints, and eligibility criteria; real-time CDISC coherence checks; retrieval-augmented search of similar protocols; audit trail designed around 21 CFR Part 11.</p>
+        <a class="go" href="https://minseong-kim.github.io/clinicalmind/">Open demo →</a>
+        </div>
+      </div>
+      <div class="card proj">
+        <a class="shot" href="https://minseong-kim.github.io/mes-pi-ai-console/"><img src="images/mes.jpg" alt="MES Process Innovation Console factory overview" loading="lazy"></a>
+        <div class="body">
+        <h3><a href="https://minseong-kim.github.io/mes-pi-ai-console/">MES Process Innovation Console (Solar)</a></h3>
+        <p>Simulated ingot-to-module manufacturing with AI-assisted root-cause analysis and predictive maintenance using Random Forest and Isolation Forest models.</p>
+        <a class="go" href="https://minseong-kim.github.io/mes-pi-ai-console/">Open demo →</a>
+        </div>
+      </div>
+      <div class="card proj">
+        <a class="shot" href="https://minseong-kim.github.io/battery-mes-ai-platform/"><img src="images/battery.jpg" alt="Battery MES·AI Integration Platform main screen" loading="lazy"></a>
+        <div class="body">
+        <h3><a href="https://minseong-kim.github.io/battery-mes-ai-platform/">Battery MES·AI Integration Platform</a></h3>
+        <p>Proof-of-concept models for defect classification, anomaly detection, predictive maintenance, and battery-life estimation, with LLM-generated diagnostic explanations.</p>
+        <a class="go" href="https://minseong-kim.github.io/battery-mes-ai-platform/">Open demo →</a>
+        </div>
+      </div>
+      <div class="card proj">
+        <a class="shot" href="https://minseong-kim.github.io/switchgear-mes-ai-bridge/"><img src="images/switchgear.jpg" alt="Switchgear MES·AI Bridge main screen" loading="lazy"></a>
+        <div class="body">
+        <h3><a href="https://minseong-kim.github.io/switchgear-mes-ai-bridge/">Switchgear MES·AI Bridge</a></h3>
+        <p>Six-module MES/AI console modeling FDC root-cause analysis, automated HiPot failure response, QMS re-inspection, and PLM/ERP engineering-change coordination.</p>
+        <a class="go" href="https://minseong-kim.github.io/switchgear-mes-ai-bridge/">Open demo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item"><span class="org">Emet Mortgage</span><span class="when">11/2025 – 03/2026 · Brea, CA</span><span class="role">Full Stack Developer</span><p class="desc">RESTful APIs for LendingQB integrations, Node.js/Express services with React front ends, and automated document-generation workflows.</p></div>
+    <div class="item"><span class="org">FNS Inc</span><span class="when">11/2021 – 08/2025 · Torrance, CA</span><span class="role">IT Lead Manager (Full Stack Developer)</span><p class="desc">Led development and 24/7 support of logistics applications; ERP/WMS/TMS integrations; root-cause analysis and mentoring.</p></div>
+    <div class="item"><span class="org">Nmsi Inc</span><span class="when">06/2020 – 10/2021 · Brea, CA</span><span class="role">IT Lead Manager (Full Stack Developer)</span><p class="desc">Mortgage origination and servicing applications on ASP.NET, .NET Core, C#, and SQL Server.</p></div>
+    <div class="item"><span class="org">Very J</span><span class="when">11/2019 – 06/2020 · Los Angeles, CA</span><span class="role">IT Manager (Full Stack Developer)</span><p class="desc">Real-time and offline inventory synchronization between warehouses and retail stores.</p></div>
+    <div class="item"><span class="org">Samsung Electronics</span><span class="when">06/2011 – 12/2013 · Yongin (Giheung), Korea</span><span class="role">Project Leader (Software Engineer)</span><p class="desc">System LSI IP management system for semiconductor design-IP reuse; enterprise PLM with configurable and intelligent BOM.</p></div>
+    <div class="item"><span class="org">NTT DATA</span><span class="when">01/2007 – 09/2010 · Fukuoka, Japan</span><span class="role">Software Engineer</span><p class="desc">Aeronautical Information Publication system; validation of flight routes, navigation aids, and airspace data on the AIRAC cycle.</p></div>
+    <p class="note">Earlier: Daegu Bank, PV Technology, Korea Post Information Center, LG Hitachi, Nexon Mobile, Neobill, Moazio (2005 – 2016). Full details in the <a href="MinseongKim_CV.pdf">CV</a>.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="item"><span class="org">Georgia Institute of Technology</span><span class="when">Spring 2027 (planned)</span><span class="role">M.S. in Computer Science — Admitted</span></div>
+    <div class="item"><span class="org">Long Beach City College</span><span class="when">2026 – present</span><span class="role">A.S. in Electrical Technology – Automation Technician (in progress)</span></div>
+    <div class="item"><span class="org">California University of Management and Sciences</span><span class="when">2017 – 2019</span><span class="role">M.S. in Computer Information Systems</span></div>
+    <div class="item"><span class="org">Jeonju University</span><span class="when">1997 – 2006</span><span class="role">B.E. in Information and Communication Engineering · GPA 3.99/4.5</span></div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <table class="certs">
+      <thead><tr><th>Certification</th><th>Issuer</th><th>Date</th></tr></thead>
+      <tbody>
+        <tr><td>Japanese-Language Proficiency Test, Level N1</td><td>Japan Foundation / JEES</td><td>Jan 2014</td></tr>
+        <tr><td>Oracle Database 10g Administrator Certified Professional (OCP)</td><td>Oracle</td><td>Aug 2010</td></tr>
+        <tr><td>Sun Certified Business Component Developer (SCBCD), Java EE 5</td><td>Sun Microsystems</td><td>May 2010</td></tr>
+        <tr><td>Sun Certified Web Component Developer (SCWCD), Java EE 5</td><td>Sun Microsystems</td><td>Apr 2010</td></tr>
+        <tr><td>Sun Certified Programmer (SCJP), Java 2 Platform SE 5.0</td><td>Sun Microsystems</td><td>Apr 2010</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Military service: Republic of Korea Air Force, full term completed.</p>
+  </section>
+
+  <footer>© Minseong Kim · Last updated October 2026</footer>
+</main>
+</body>
+</html>
